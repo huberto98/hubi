@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    display: flex;
+	background-color: royalblue;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 36px;
+}
+
+.input-box {
+    position: relative;
+}
+
+input {
+    padding: 1em;
+    width: 400px;
+    border-radius: 8px;
+    border: 2px solid #aaa;
+    background: none;
+    color: #aaa;
+}
+
+label {
+    position: absolute;
+    font-size: 20px;
+    padding: 0 0.5em;
+    transition: transform .3s;
+    top: 32%;
+    left: 2%;
+    pointer-events: none;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(92, 92, 251);
+}
+
+input:focus ~ label {
+    transform: translateY(-90%);
+    color: rgb(92, 92, 251);
+    background-color: #333;
+}
